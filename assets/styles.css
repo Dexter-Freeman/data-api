@@ -1,0 +1,13 @@
+#issMap {
+    height: 480px;
+}
+
+.page-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 10px;
+}
+
+section {
+    margin-top: 10px;
+}

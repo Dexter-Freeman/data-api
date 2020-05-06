@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,37 @@
     <!-- Add Chart-JS for visualisation -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
-    <script src="app.js"></script>
+    <!-- Leaflet.js css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <!-- Leaflet.js inject -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin="">
+        </script>
+
+    <link rel="stylesheet" href="/assets/styles.css">
+
+    <script src="/assets/app.js"></script>
 </head>
+
 <body>
-    <h1>Data API Project</h1>
-    <section id="section-chart">
-        <canvas id="chart"></canvas>
-    </section>
-    <section id="section-iss">
-        <h2>ISS position</h2>
-        <p>
-            <b>iss latitude:</b> <span id="lat"></span><br>
-            <b>iss longitude:</b> <span id="lon"></span>
-        </p>
-    </section>
+    <div class="page-wrapper">
+        <h1>Data API Project</h1>
+        <section id="section-chart">
+            <canvas id="chart"></canvas>
+        </section>
+        <section id="section-iss">
+            <h2>ISS position</h2>
+            <p>
+                <b>iss latitude:</b> <span id="lat"></span>°<br>
+                <b>iss longitude:</b> <span id="lon"></span>°
+            </p>
+            <div id="issMap"></div>
+        </section>
+    </div>
 
 </body>
+
 </html>
